@@ -36,7 +36,7 @@ public class ClientSwing implements ClientController, ClientCommunicator {
         try {
             //Acquire the semaphore so that we can wait for the user input
             MainSwing.available.acquire();
-        } catch (Exception e) {}
+        } catch (Exception e) { System.out.println("Error with the semaphore: " + e.getMessage(); }
         //Once the user hits "Submit", the data is stored and the semaphore is released
         return gamescreen.returnGuess();
     }
@@ -48,8 +48,8 @@ public class ClientSwing implements ClientController, ClientCommunicator {
             switchScreens();
             //Acquire the semaphore so that we can wait for the user input
             MainSwing.available.acquire();
-        } catch (Exception e) {}
-        //Once the user hits "Submit", the data is stored and the semaphore is released
+        } catch (Exception e) { System.out.println("Error with the semaphore: " + e.getMessage(); }
+        //Once the user hits a button, the data is stored and the semaphore is released
         return tryagainscreen.getTryAgainValue();
     }
 
@@ -62,7 +62,7 @@ public class ClientSwing implements ClientController, ClientCommunicator {
         gamescreen.playWin();
         //Sleep the thread to give the player a chance to read if he won/lost
         try { Thread.sleep(2250); }
-        //Ignore the exception, serves only as a timer to display the feedback.
+        //Ignore the exception, serves only as a timer to display the feedback; user can still know s/he won by the music.
         catch (Exception ignored) {}
     }
 
@@ -72,7 +72,7 @@ public class ClientSwing implements ClientController, ClientCommunicator {
         gamescreen.playLose();
         //Sleep the thread to give the player a chance to read if he won/lost
         try { Thread.sleep(2250); }
-        //Ignore the exception, serves only as a timer to display the feedback.
+        //Ignore the exception, serves only as a timer to display the feedback; user can still know s/he lost by the music.
         catch (Exception ignored) {}
     }
 
