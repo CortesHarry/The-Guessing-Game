@@ -26,15 +26,15 @@ public class ClientControllerCLI implements ClientController {
 	/* nextGuess() method. Returns what the user want to guess next. */
 	public int nextGuess() {
 		while (true) {
-            try {
-                System.out.printf("Guess a number between 1 and %d:\n", this.config.getMaxNumber());
-                int guess = input.nextInt();
-                return guess;
-            } catch (java.util.InputMismatchException ex) {
-                System.out.println("Try a number, please. ");
-                input.nextLine();
-           }
-        }
+            		try {
+				System.out.printf("Guess a number between 1 and %d:\n", this.config.getMaxNumber());
+				int guess = input.nextInt();
+				return guess;
+		    	} catch (java.util.InputMismatchException ex) {
+				System.out.println("Try a number, please. ");
+				input.nextLine();
+           		}
+        	}
 	}
 	
 	/* playAgain() method. Returns whether or not the user would like to replay. */
