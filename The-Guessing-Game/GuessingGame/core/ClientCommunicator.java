@@ -11,11 +11,11 @@ public interface ClientCommunicator {
 		Member methods 
 	*/
 	/* Informs the user that they've won */ 
-    void win(); 
+    	void win(); 
 	/* Informs the user that they've lost */
-    void lose();
+   	void lose();
 	/* Feedback that tells the user to guess higher */
-    void tooLow(int guess);							
+    	void tooLow(int guess);							
 	/* Feedback that tells the user to guess lower */
-    void tooHigh(int guess);
+    	void tooHigh(int guess);
 }
