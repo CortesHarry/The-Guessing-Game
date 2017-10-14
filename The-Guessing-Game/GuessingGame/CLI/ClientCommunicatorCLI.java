@@ -15,8 +15,6 @@ public class ClientCommunicatorCLI implements ClientCommunicator {
     	public void win(){ System.out.println("Congrats! You've won!"); }
 	/* Informs the user that they've lost */
 	public void lose() { System.out.println("Oh no! It's a gameover!"); }
-	/* Sets the welcome message again */
-	public void reset() { System.out.println("Welcome to the GuessingGame!"); }
 	/* Feedback that tells the user to guess higher */
 	public void tooLow(int guess) { System.out.println("Your guess of " + guess + " was too low. Try a little higher!"); }
 	/* Feedback that tells the user to guess lower */
