@@ -12,7 +12,7 @@ public class ClientCommunicatorCLI implements ClientCommunicator {
 		Member methods 
 	*/
 	/* Informs the user that they've won */
-    public void win(){ System.out.println("Congrats! You've won!"); }
+    	public void win(){ System.out.println("Congrats! You've won!"); }
 	/* Informs the user that they've lost */
 	public void lose() { System.out.println("Oh no! It's a gameover!"); }
 	/* Sets the welcome message again */
